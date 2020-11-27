@@ -27,7 +27,7 @@ http.request = function (opts, cb) {
 		host = '[' + host + ']'
 
 	// This may be a relative url. The browser should always be able to interpret it correctly.
-	opts.url = (host ? (protocol + '//' + host) : '') + (port ? ':' + port : '') + path
+	opts.url = (host ? (protocol + '//' + host) : '') + path
 	opts.method = (opts.method || 'GET').toUpperCase()
 	opts.headers = opts.headers || {}
 
